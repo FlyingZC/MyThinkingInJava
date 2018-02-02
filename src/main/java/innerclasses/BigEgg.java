@@ -1,0 +1,43 @@
+package innerclasses;
+
+//: innerclasses/BigEgg.java
+// An inner class cannot be overriden like a method.
+import static net.mindview.util.Print.*;
+
+class Egg
+{
+    private Yolk y;
+
+    protected class Yolk
+    {
+        public Yolk()
+        {
+            print("Egg.Yolk()");
+        }
+    }
+
+    public Egg()
+    {
+        print("New Egg()");
+        y = new Yolk();
+    }
+}
+
+public class BigEgg extends Egg
+{   //试图重写 父类中的内部类,不起作用
+    public class Yolk
+    {
+        public Yolk()
+        {
+            print("BigEgg.Yolk()");
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        new BigEgg();
+    }
+} /* Output:
+  New Egg()
+  Egg.Yolk()
+  *///:~

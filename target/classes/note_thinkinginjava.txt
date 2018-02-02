@@ -1,0 +1,104 @@
+搜索一下书中的类在哪个包,不就找到对应包了吗
+第6章 访问权限控制
+access
+1.
+access.dessert包和
+access包
+不是同一个包
+两个包中的类不能使用包访问权限访问
+
+2.若父类Cookie类中存在一个方法bite(),则该方法也存在于任何继承Cookie的类中,
+但由于bite()具有包访问权限而且位于另一个包中,则在当前包中无法使用它.
+package com.zc;
+class Cookie
+{
+//具有包访问权限的父类中的bite()方法
+	void bite(){}
+}
+
+package com.xdd;
+class Sub extends Cookie
+{
+	//其实子类中具备父类中的bite()方法,但是无法调用该方法,因为不在同一个包内
+}
+
+3.封装的结果是:一个同时带有特征和行为的数据类型
+
+4.创建类时,将public 成员置于开头,随后protected,包访问权限和private成员或方法.结构会清晰一些.
+
+5.protected页具备包访问权限,即当前类,同包内,子类中.
+
+6.类只能用public或不加修饰符修饰.
+
+第7章 复用类
+reusing
+1.组合:将对象引用 置于 新类中 即可
+
+2.可初始化引用对象的四个位置:
+(1)在定义对象的地方,定义并直接初始化.则它总能在构造器被调用之前被初始化
+(2)在类的构造器中
+(3)在正要使用这些对象之前.即惰性初始化
+(4)使用实例初始化,即在代码块中初始化
+
+3.子构造子类之前构造父类,自动插入构造父类的调用
+
+4.对代理的理解:是继承与组合之间的中庸之道.因此我们将一个成员对象置于所要构造的类中(就像组合,我理解是原始类作为代理类的属性),
+但与此同时我们在新类中暴露了该成员对象的所有方法(就像继承,我理解是代理类中的方法持有对原始类中方法的调用)
+SpaceShip中包含SpaceShipControls.可在SpaceShip中代理SpaceShipControls
+
+5.组合与继承:编译期强制在构造当前类之前初始化基类,但不会监督你必须将成员对象也初始化
+P166  7.4.1
+
+6.
+Beetle类:继承与 初始化问题.参见书P147
+
+
+第八章 多态
+polymorphism
+
+第九章 接口
+interfaces
+1.策略模式P175
+interfaces/classprocessor/Apply.java
+
+2.适配器模式P177
+interfaces.interfaceprocessor.FilterAdapter
+也用到 代理 模式
+
+第十章 内部类
+innerclasses
+
+第11章 持有对象(集合)
+holding
+
+第12章 通过异常处理错误
+exceptions
+
+第13章 字符串
+strings
+
+第14章 类型信息RTTI
+typeinfo
+
+第15章 泛型
+generics
+
+第16章 数组
+arrays
+
+第17章 容器 深入
+
+第18章 IO
+io
+
+第19章 枚举 
+enumerated
+
+
+
+
+
+
+
+
+
