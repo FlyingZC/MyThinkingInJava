@@ -1,8 +1,6 @@
-//: xml/People.java
-// {Requires: nu.xom.Node; You must install
-// the XOM library from http://www.xom.nu }
-// {RunFirst: Person}
+package xml;
 import nu.xom.*;
+
 import java.util.*;
 
 public class People extends ArrayList<Person> {

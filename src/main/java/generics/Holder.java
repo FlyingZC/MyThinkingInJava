@@ -42,7 +42,7 @@ public class Holder<T>
         
         //泛型是不变的,不能将Holder<Apple>类型的对象 转型成Holder<Fruit>类型的对象
         //Type mismatch: cannot convert from Holder<Apple> to Holder<Fruit>
-        Holder<Fruit> Fruit = appleHolder; // Cannot upcast
+        // Holder<Fruit> Fruit = appleHolder; // Cannot upcast
         
         //但是可以使用通配符 将Holder<Apple>类型的对象 转型成Holder<? extends Fruit>类型的对象
         Holder<? extends Fruit> fruitHolder = appleHolder; // OK
@@ -61,8 +61,8 @@ public class Holder<T>
             System.out.println(e);
         }
         //fruitHolder的泛型参数是<? extends Fruit>.即代表任何事物,而编译期无法验证"任何事物"的类型安全
-        fruitHolder.set(new Apple()); // Cannot call set()
-        fruitHolder.set(new Fruit()); // Cannot call set()
+//        fruitHolder.set(new Apple()); // Cannot call set()
+//        fruitHolder.set(new Fruit()); // Cannot call set()
         
         //setObj方法接收的是Object类型
         fruitHolder.setObj(new Apple());

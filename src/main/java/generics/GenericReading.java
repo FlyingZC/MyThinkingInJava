@@ -36,7 +36,7 @@ public class GenericReading
     {
         Reader<Fruit> fruitReader = new Reader<Fruit>();
         Fruit f = fruitReader.readExact(fruits);
-        Fruit a = fruitReader.readExact(apples); // Error:正常来说,不能从List<Apple>中读出Fruit对象
+        // Fruit a = fruitReader.readExact(apples); // Error:正常来说,不能从List<Apple>中读出Fruit对象
         //readExact(List<Fruit>) cannot be applied to (List<Apple>).
     }
 

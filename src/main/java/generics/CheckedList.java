@@ -6,6 +6,7 @@ import java.util.List;
 
 //: generics/CheckedList.java
 // Using Collection.checkedList().
+import typeinfo.pets.Cat;
 import typeinfo.pets.Dog;
 import typeinfo.pets.Pet;
 
