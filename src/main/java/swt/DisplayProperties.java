@@ -16,9 +16,11 @@ public class DisplayProperties {
     System.getProperties().list(new PrintWriter(props));
     text.setText(props.toString());
     shell.open();
-    while(!shell.isDisposed())
-      if(!display.readAndDispatch())
-        display.sleep();
+    while(!shell.isDisposed()) {
+        if(!display.readAndDispatch()) {
+            display.sleep();
+        }
+    }
     display.dispose();
   }
 } ///:~

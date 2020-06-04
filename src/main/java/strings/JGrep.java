@@ -18,9 +18,10 @@ public class JGrep {
     Matcher m = p.matcher("");
     for(String line : new TextFile(args[0])) {
       m.reset(line);
-      while(m.find())
+      while(m.find()) {
         System.out.println(index++ + ": " +
           m.group() + ": " + m.start());
+      }
     }
   }
 } /* Output: (Sample)

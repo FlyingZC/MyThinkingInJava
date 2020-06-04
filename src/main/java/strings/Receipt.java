@@ -11,6 +11,7 @@ public class Receipt
 
     public void printTitle()
     {
+        // %[argument_index$][flags][width][.precision]conversion
         f.format("%-15s %5s %10s\n", "Item", "Qty", "Price");
         f.format("%-15s %5s %10s\n", "----", "---", "-----");
     }

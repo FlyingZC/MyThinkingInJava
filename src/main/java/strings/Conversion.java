@@ -4,6 +4,17 @@ package strings;
 import java.math.*;
 import java.util.*;
 
+/**
+ * | d  | 整数型(十进制)   |
+ * | c  | Unicode字符      |
+ * | b  | Boolean值        |
+ * | s  | String           |
+ * | f  | 浮点数(十进制)   |
+ * | e  | 浮点数(科学计数) |
+ * | x  | 整数(十六进制)   |
+ * | h  | 散列码(十六进制) |
+ * | %  | 字符 %           |
+ */
 public class Conversion
 {
     public static void main(String[] args)
@@ -15,17 +26,17 @@ public class Conversion
         f.format("s: %s\n", u);
         // f.format("d: %d\n", u);
         f.format("c: %c\n", u);
-        f.format("b: %b\n", u);
+        f.format("b: %b\n", u); // b: true
         // f.format("f: %f\n", u);
         // f.format("e: %e\n", u);
         // f.format("x: %x\n", u);
-        f.format("h: %h\n", u);
+        f.format("h: %h\n", u); // h: 61
 
         int v = 121;
         System.out.println("v = 121");
         f.format("d: %d\n", v);
-        f.format("c: %c\n", v);
-        f.format("b: %b\n", v);
+        f.format("c: %c\n", v); // c: y
+        f.format("b: %b\n", v); // b: true
         f.format("s: %s\n", v);
         // f.format("f: %f\n", v);
         // f.format("e: %e\n", v);
